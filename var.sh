@@ -1,12 +1,13 @@
 #!/bin/bash
 
-GITHUB_ID="codingspecialist"
-PROJECT_NAME="aws-v2"
-PROJECT_VERSION="0.0.1"
-PROJECT_PID="$(pgrep -f ${PROJECT_NAME}-${PROJECT_VERSION}.jar)"
-JAR_PATH="${HOME}/${PROJECT_NAME}/build/libs/${PROJECT_NAME}-${PROJECT_VERSION}.jar"
+GITHUB_ID="yangyuzz"
+REPO_NAME="aws_test"
+PROJECT_NAME="boot_hello"
+PROJECT_PID="$(pgrep -f ${PROJECT_NAME}.jar)"
+JAR_PATH="${HOME}/${REPO_NAME}/${PROJECT_NAME}/build/libs/${PROJECT_NAME}.jar"
 
 export GITHUB_ID
+export REPO_NAME
 export PROJECT_NAME
 export PROJECT_VERSION
 export PROJECT_PID

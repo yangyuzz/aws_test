@@ -22,22 +22,29 @@ else
   echo "3-1. apt update complete"
   
   # 3-2 jdk install
-  sudo apt-get -y install openjdk-11-jdk 1>/dev/null
+  sudo apt-get -y install openjdk-17-jdk 1>/dev/null
   echo "3-2. jdk install complete"
   
   # 3-3 timezone
   sudo timedatectl set-timezone Asia/Seoul
   echo "3-3. timezone setting complete"
+
+  # 내가 깃에 프로젝트 zip 파일로 올려서 ;; 압축해제도 넣어야 함.
+  sudo apt-get install zip unzip
 fi
 
 # 4. project folder delete
-rm -rf ${HOME}/${PROJECT_NAME}
+rm -rf ${HOME}/${REPO_NAME}
 echo "4. project folder delete complete"
 
 # 5. git clone
-git clone https://github.com/${GITHUB_ID}/${PROJECT_NAME}.git
+git clone https://github.com/${GITHUB_ID}/${REPO_NAME}.git
 sleep 3s
 echo "5. git clone complete"
+
+# zipped pjt in repo have to unzip
+unzip ${HOME}/${REPO_NAME}/
+
 
 # 6. gradlew +x
 chmod u+x ${HOME}/${PROJECT_NAME}/gradlew
