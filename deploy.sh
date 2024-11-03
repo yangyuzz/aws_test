@@ -31,6 +31,7 @@ else
 
   # 내가 깃에 프로젝트 zip 파일로 올려서 ;; 압축해제도 넣어야 함.
   sudo apt-get install zip unzip
+  echo "install zip unzip complete!"
 fi
 
 # 4. project folder delete
@@ -43,15 +44,15 @@ sleep 3s
 echo "5. git clone complete"
 
 # zipped pjt in repo have to unzip
-unzip ${HOME}/${REPO_NAME}/
+unzip ${HOME}/${REPO_NAME}/${PROJECT_NAME}.zip -d ${HOME}/${REPO_NAME}/${PROJECT_NAME}
 
 
 # 6. gradlew +x
-chmod u+x ${HOME}/${PROJECT_NAME}/gradlew
+chmod u+x ${HOME}/${REPO_NAME}/${PROJECT_NAME}/gradlew
 echo "6. gradlew u+x complete"
 
 # 7. build
-cd ${HOME}/${PROJECT_NAME}
+cd ${HOME}/${REPO_NAME}/${PROJECT_NAME}
 ./gradlew clean build
 echo "7. gradlew build complete"
 
@@ -60,9 +61,9 @@ nohup java -jar -Dspring.profiles.active=prod ${JAR_PATH} 1>${HOME}/log.out 2>${
 echo "8. start server complete"
 
 # 9. cron registration
-touch crontab_new
-echo "* * * * * ${HOME}/check-and-restart.sh" 1>>crontab_new
+# touch crontab_new
+# echo "* * * * * ${HOME}/check-and-restart.sh" 1>>crontab_new
 # register the others... you use >> (append)
-crontab crontab_new
-rm crontab_new
-echo "9. cron registration complete"
+# crontab crontab_new
+# rm crontab_new
+# echo "9. cron registration complete"
