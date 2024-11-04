@@ -1,0 +1,41 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.3)
+
+2024-11-03T08:45:26.339Z  INFO 85615 --- [day0828_boot_hello] [           main] c.g.hello.Day0828BootHelloApplication    : Starting Day0828BootHelloApplication v0.0.1-SNAPSHOT using Java 17.0.12 with PID 85615 (/home/ubuntu/aws_test/boot_hello/build/libs/day0828_boot_hello-0.0.1-SNAPSHOT.jar started by ubuntu in /home/ubuntu/aws_test/boot_hello)
+2024-11-03T08:45:26.345Z  INFO 85615 --- [day0828_boot_hello] [           main] c.g.hello.Day0828BootHelloApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-11-03T08:45:28.766Z  INFO 85615 --- [day0828_boot_hello] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2024-11-03T08:45:28.773Z  INFO 85615 --- [day0828_boot_hello] [           main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-03T08:45:28.776Z  INFO 85615 --- [day0828_boot_hello] [           main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.2].
+2024-11-03T08:45:28.805Z  INFO 85615 --- [day0828_boot_hello] [           main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.13 30 Jan 2024]
+2024-11-03T08:45:28.837Z  INFO 85615 --- [day0828_boot_hello] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-03T08:45:28.837Z  INFO 85615 --- [day0828_boot_hello] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-03T08:45:29.145Z  INFO 85615 --- [day0828_boot_hello] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-03T08:45:29.148Z  INFO 85615 --- [day0828_boot_hello] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2665 ms
+2024-11-03T08:45:29.921Z  INFO 85615 --- [day0828_boot_hello] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-11-03T08:45:30.531Z  INFO 85615 --- [day0828_boot_hello] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2024-11-03T08:45:30.587Z  INFO 85615 --- [day0828_boot_hello] [           main] c.g.hello.Day0828BootHelloApplication    : Started Day0828BootHelloApplication in 5.251 seconds (process running for 6.546)
+2024-11-03T08:45:42.556Z  INFO 85615 --- [day0828_boot_hello] [nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-03T08:45:42.557Z  INFO 85615 --- [day0828_boot_hello] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-03T08:45:42.560Z  INFO 85615 --- [day0828_boot_hello] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-11-03T17:50:13.592Z  INFO 85615 --- [day0828_boot_hello] [io-8888-exec-10] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xee0x010x000x000xea0x030x03l0xf7K0x920xb1e}0xd9WS0xc50x9c0xd80xe10xbf=.0xc20xa30x13D0x950x801O&W0xfa0x1am0xde0xc6 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.28.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:257) ~[tomcat-embed-core-10.1.28.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.28.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.28.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.28.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.28.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.28.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.28.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.28.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+

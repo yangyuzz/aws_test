@@ -57,7 +57,8 @@ cd ${HOME}/${REPO_NAME}/${PROJECT_NAME}
 echo "7. gradlew build complete"
 
 # 8. start jar
-nohup java -jar -Dspring.profiles.active=prod ${JAR_PATH} 1>${HOME}/log.out 2>${HOME}/err.out &
+# nohup java -jar -Dspring.profiles.active=prod ${JAR_PATH} 1>${HOME}/log.out 2>${HOME}/err.out &
+nohup java -jar ${JAR_PATH} &
 echo "8. start server complete"
 
 # 9. cron registration
